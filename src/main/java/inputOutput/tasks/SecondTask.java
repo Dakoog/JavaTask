@@ -14,8 +14,8 @@ i ustaw w kolumnie wyrównanej do prawej strony. */
 public class SecondTask {
     public static void main(String[] args) {
         double φ = (1 + sqrt(5.0)) / 2;
-       double π = PI;
-       double e = E; // Math class was imported
+        double π = PI;
+        double e = E; // Math class was imported
 
 
         out.printf("π = %.10f%n" , π);
