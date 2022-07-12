@@ -10,9 +10,10 @@ public class SixthTask {
         double degrees = Math.toDegrees(1);
         int dg, min, sec;
         dg = (int) degrees;
-        min = (int) ((degrees - dg) * 60 + 0.5);
+        min = (int) ((degrees - dg) * 60 + 0.5);//rounding without using Math.round
+
         System.out.printf("1 rad = %d\u00B0%2d'%n", dg, min);
-        min = (int) ((degrees - dg) * 60);
+        min = (int) ((degrees - dg) * 60);//remove the decimal part and leave only the integer part
         sec = (int) ((degrees - dg - min / 60.0) * 3600 + 0.5);
         System.out.printf("1 rad = %d\u00B0%2d'%2d''%n", dg, min, sec);
 
