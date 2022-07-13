@@ -4,10 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/* 10.1 Napisz program zamieniający temperaturę podaną w stopniach Celsjusza na temperaturę wyrażoną w stopniach Fahrenheita.
+/* 11.1 Napisz program zamieniający temperaturę podaną w stopniach Celsjusza na temperaturę wyrażoną w stopniach Fahrenheita.
  Dane wejściowe wprowadzamy z klawiatury w postaci liczby dziesiętnej; wynik należy obliczyć i wyświetlić z dokładnością do
 0,1 stopnia
-   10.2 Napisz program zamieniający temperaturę podaną w stopniach Fahrenheita na temperaturę wyrażoną w stopniach Celsjusza.
+   11.2 Napisz program zamieniający temperaturę podaną w stopniach Fahrenheita na temperaturę wyrażoną w stopniach Celsjusza.
  Dane wejściowe wprowadzamy z klawiatury w postaci liczby dziesiętnej; wynik należy obliczyć i wyświetlić z dokładnością do
 0,1 stopnia*/
 public class FirstTask {
