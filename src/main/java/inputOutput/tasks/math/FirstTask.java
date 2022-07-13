@@ -1,4 +1,4 @@
-package inputOutput.tasks;
+package inputOutput.tasks.math;
 
 import java.util.Calendar;
 import java.util.Currency;

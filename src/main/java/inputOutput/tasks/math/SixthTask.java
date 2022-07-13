@@ -1,4 +1,4 @@
-package inputOutput.tasks;
+package inputOutput.tasks.math;
 /* .
 10.6 Wyświetl w konsoli miarę kąta o rozwartości 1 radiana w stopniach (z maksymalną
 możliwą precyzją), w stopniach i minutach kątowych oraz w stopniach, minutach i sekundach kątowych*/

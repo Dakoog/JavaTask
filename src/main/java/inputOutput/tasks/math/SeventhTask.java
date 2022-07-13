@@ -1,4 +1,4 @@
-package inputOutput.tasks;
+package inputOutput.tasks.math;
 /*10.7.
 Wyświetl w konsoli miary kątów 1°, 1' i 1" w radianach z dokładnością do 15 miejsc
 po przecinku.*/

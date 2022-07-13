@@ -1,4 +1,4 @@
-package inputOutput.tasks;
+package inputOutput.tasks.math;
 
 /*
 Napisz aplikację, która wyświetli w konsoli w trzech kolumnach liczby naturalne 2, 3,

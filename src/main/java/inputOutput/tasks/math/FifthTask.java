@@ -1,4 +1,4 @@
-package inputOutput.tasks;
+package inputOutput.tasks.math;
 /*
 Wyświetl w konsoli kody ósemkowe, dziesiątkowe i szesnastkowe wielkich liter alfabetu łacińskiego. W pierwszym wierszu umieść opisy poszczególnych kolumn:
 Znak,OCT, DEC i HEX.*/

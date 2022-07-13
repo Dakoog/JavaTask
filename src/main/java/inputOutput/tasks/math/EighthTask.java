@@ -1,4 +1,4 @@
-package inputOutput.tasks;
+package inputOutput.tasks.math;
 /* 10.8. Oblicz kąty ostre w trójkącie egipskim (trójkącie prostokątnym o proporcji boków 3:4:5). Wyniki podaj:
 a) w radianach, z dokładnością do 4 miejsc po przecinku,
 b) w stopniach, z dokładnością do 1 miejsca po przecinku,

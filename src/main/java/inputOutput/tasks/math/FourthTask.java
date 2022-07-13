@@ -1,4 +1,4 @@
-package inputOutput.tasks;
+package inputOutput.tasks.math;
 /*10.4 Napisz aplikację, która wyświetli w konsoli pierwiastki arytmetyczne od stopnia 2. do
         10. z liczby 5 z dokładnością do 6 miejsc po przecinku*/
 
