@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-public class ThirdTask {
+public class BinaryNumbers {
 
 
     public static void main(String[] args) throws IOException {
