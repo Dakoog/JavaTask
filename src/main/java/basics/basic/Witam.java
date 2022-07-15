@@ -1,4 +1,4 @@
-package basics;
+package basics.basic;
 /*Napisz polskojęzyczną wersję klasycznego przykładu klasy Hello.*/
 public class Witam {
     public static void main(String[] args) {

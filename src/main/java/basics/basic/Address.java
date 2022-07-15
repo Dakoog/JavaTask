@@ -1,4 +1,4 @@
-package basics;
+package basics.basic;
 
 public class Address {
     public static void main(String[] args) {
