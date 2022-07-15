@@ -32,7 +32,7 @@ public class FileEmployees {
         int hours;
         double rate, salary;
         try {
-            System.out.println("\n        *** Employee payroll ***");
+            System.out.println("\n           *** Employee payroll ***");
             do {
                 name = input.next();
                 surname = input.next();

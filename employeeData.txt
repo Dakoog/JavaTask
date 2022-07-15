@@ -1,4 +1,4 @@
-Lech Bolek 150 25,3
+Lech Bolecki 150 25,3
 Ewa  Wąż 270 19,8
 Piotr Klucznik 220 17,0
 Małgorzata Mistrz 70 34,8
