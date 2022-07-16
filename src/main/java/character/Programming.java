@@ -6,7 +6,7 @@ a) zamień pierwszą literę na wielką,
 b) zamień wszystkie litery na wielkie.*/
 public class Programming {
     public static void main(String[] args) {
-        char[] programming = {'p', 'r', 'o', 'g', 'r', 'a', 'm', 'm', 'i', 'n', 'g', '.'};
+        char[] programming ="programming".toCharArray();
         System.out.println("\na)Change of the first letter to capital.");
         programming[0] = Character.toUpperCase(programming[0]);
         System.out.println(programming);

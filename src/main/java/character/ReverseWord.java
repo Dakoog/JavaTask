@@ -4,7 +4,7 @@ package character;
 Napisz program wyświetlający znaki zawarte w tablicy w kolejnoci odwrotnej — od końca do początku*/
 public class ReverseWord {
     public static void main(String[] args) {
-        char[] programming = {'p', 'r', 'o', 'g', 'r', 'a', 'm', 'm', 'i', 'n', 'g', '.'};
+        char[] programming = "programming.".toCharArray();
         System.out.println("I. Reverse fori");
         for (int i = programming.length - 1; i >= 0; --i) {
             System.out.print(programming[i]);
