@@ -15,7 +15,6 @@ public class FileEmployees {
     public static void main(String[] args) throws IOException {
 
         File employeeData = new File("employeeData.txt");
-        boolean isCreatedNewFile = employeeData.createNewFile();
 
         PrintWriter writer = new PrintWriter(employeeData);
         writer.println("""
@@ -26,27 +25,28 @@ public class FileEmployees {
                 Tomasz Niedowiarek 237 25,3"""
         );
         writer.close();
-        Scanner input = new Scanner(employeeData);
+        try (Scanner input = new Scanner(employeeData)) {
 
-        String name, surname;
-        int hours;
-        double rate, salary;
-        try {
-            System.out.println("\n           *** Employee payroll ***");
-            do {
-                name = input.next();
-                surname = input.next();
-                hours = input.nextInt();
-                rate = input.nextDouble();
-                salary = hours * rate;
+            String name, surname;
+            int hours;
+            double rate, salary;
+            try {
+                System.out.println("\n           *** Employee payroll ***");
+                do {
+                    name = input.next();
+                    surname = input.next();
+                    hours = input.nextInt();
+                    rate = input.nextDouble();
+                    salary = hours * rate;
 
-                System.out.printf("%s %s's salary in this month is %.2f$. %n", name, surname, salary);
+                    System.out.printf("%s %s's salary in this month is %.2f$. %n", name, surname, salary);
+                }
+                while (true);
+            } catch (NoSuchElementException nsee) {
+                //  don't catch, because don't need
             }
-            while (!name.isEmpty());
-        } catch (NoSuchElementException nsee) {
-            System.out.println();
-        }
 
+        }
     }
 }
 
