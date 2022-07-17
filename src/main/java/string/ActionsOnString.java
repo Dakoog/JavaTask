@@ -1,5 +1,5 @@
 package string;
-/* 4.4 Utwórz acuch znaków "java programming curse.", a następnie: 	r
+/* 4.4 Utwórz łańcuch znaków "java programming curse.", a następnie: 	r
     a) zamień pierwszą literę na dużą
     b) zamień wszystkie litery na duże
 4.5 c) napisz ten łańcuch wspak
