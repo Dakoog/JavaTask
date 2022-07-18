@@ -12,6 +12,7 @@ Login: KOmar
 
 public class Person {
     public static void main(String[] args){
+
         System.out.println("\t\t*** PERSONAL DATA ***");
         System.out.println("----------------------------------");
         System.out.println("Surname: " + args[1].substring(0, 1).toUpperCase().concat(args[1].substring(1).toLowerCase()));
@@ -20,6 +21,7 @@ public class Person {
                                               .concat(args[0].substring(1).toLowerCase())));
         System.out.println("Initials: " + args[0].toUpperCase().charAt(0)+args[1].toUpperCase().charAt(0));
         System.out.println("Login: " + args[0].substring(0,3).toUpperCase()+args[1].substring(0,4).toLowerCase());
+
     }
 
 }
