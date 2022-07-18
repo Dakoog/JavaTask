@@ -1,4 +1,4 @@
-package basics.basic.args;
+package args;
 
 import java.util.Scanner;
 
@@ -10,11 +10,9 @@ public class Arguments {
     public static void main(String[] args) {
 
         System.out.println("Numbers of arguments: "+args.length);
-        for (String numbers : args) {
-            System.out.println(numbers);
-        }
+
         for (int i = 0; i < args.length ; i++) {
-            System.out.println(i +": "+ args[i]);
+            System.out.println("args["+i +"]: "+ args[i]);
         }
     }
 }
