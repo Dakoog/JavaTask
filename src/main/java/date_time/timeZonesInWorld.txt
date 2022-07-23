@@ -1,0 +1,26 @@
+                                                                             TIME ZONES IN THE WORLD
+                               ---------------------------------------------------------------------------------------------------------
+                               MST - -07:00                           HST - -10:00                          EST - -05:00
+                             | ART - Africa/Cairo                   | CST - America/Chicago               | CTT - Asia/Shanghai | ACT - Australia/Darwin
+                             | CAT - Africa/Harare                  | PNT - America/Phoenix               | BST - Asia/Dhaka    | AET - Australia/Sydney
+                             | EAT - Africa/Addis_Ababa             | PST - America/Los_Angeles           | NET - Asia/Yerevan  | ECT - Europe/Paris
+                             | BET - America/Sao_Paulo              | DNT - America/Denver                | IST - Asia/Kolkata  | MST - Europe/Moscow
+                             | PRT - America/Puerto_Rico            | IET - America/Indiana/Indianapolis  | JST - Asia/Tokyo    | NST - Pacific/Auckland
+                             | AGT - America/Argentina/Buenos_Aires | NYT - America/New_York              | PLT - Asia/Karachi  | MIT - Pacific/Apia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
