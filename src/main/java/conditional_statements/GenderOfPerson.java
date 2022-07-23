@@ -1,4 +1,4 @@
-package builder.conditional_statements;
+package conditional_statements;
 
 import java.io.BufferedReader;
 import java.io.IOException;
