@@ -13,15 +13,18 @@ Program powinien sprawdzić, czy wprowadzona długość boku jest poprawna (doda
 public class SquareArea {
     public static void main(String[] args) throws IOException {
         System.out.println("\n\t\t\tCALCULATE AREA AND PERIMETER OF SQUARE.");
+
         InputStreamReader input = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(input);
         System.out.print("Please, insert length of the side of the square. Remember, it is positive number! a = ");
         Double a = Double.parseDouble(br.readLine());
         input.close();
+
         double squareArea = a * a;
         double perimeterOfSquare = 4 * a;
+
         if (a < 0) {
-            System.out.println("Remember, length of the side of the square  it is positive number!");
+            System.out.println("Remember, length of the side of the square it is positive number!");
         } else {
             System.out.printf("The area of a square with a side a = %.1f is %.2f. %nHis perimeter is %.2f ", a, squareArea, perimeterOfSquare);
         }
