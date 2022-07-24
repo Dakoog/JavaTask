@@ -19,12 +19,12 @@ public class SetNumbers {
         double b = Double.parseDouble(br.readLine());
         input.close();
 
-        if(a == b ){
-            System.out.printf("Result it is set {%.2f}. %n",a);
-        } else if (a>b) {
-            System.out.printf("Result it is interval <%.2f ; %.2f>. %n",b,a);
-        }else {
-            System.out.printf("Result it is interval <%.2f ; %.2f>. %n",a,b);
+        if (a == b) {
+            System.out.printf("Result it is set {%.2f}. %n", a);
+        } else if (a > b) {
+            System.out.printf("Result it is interval <%.2f ; %.2f>. %n", b, a);
+        } else {
+            System.out.printf("Result it is interval <%.2f ; %.2f>. %n", a, b);
         }
     }
 }
