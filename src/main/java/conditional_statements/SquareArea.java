@@ -23,8 +23,9 @@ public class SquareArea {
         double squareArea = a * a;
         double perimeterOfSquare = 4 * a;
 
-        if (a < 0) {
-            System.out.println("Remember, length of the side of the square it is positive number!");
+        if (a <= 0) {
+            System.err.println("Remember, length of the side of the square it is positive number!");
+            System.exit(0);
         } else {
             System.out.printf("The area of a square with a side a = %.1f is %.2f. %nHis perimeter is %.2f ", a, squareArea, perimeterOfSquare);
         }
