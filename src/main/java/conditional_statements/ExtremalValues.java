@@ -3,6 +3,7 @@ package conditional_statements;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import static java.lang.Math.*;
 
 /*13.7.
 Użytkownik wprowadza z klawiatury trzy liczby a, b i c.
@@ -39,8 +40,8 @@ public class ExtremalValues {
         }
         System.out.println(result);
         // Alternative -> three-field expression
-        double max = (Math.max((Math.max(a, b)), c));//((((a>b)? a:b)>c)?((a>b)?a:b):c);
-        double min = (Math.min((Math.min(a, b)), c));//((((a<b)? a:b)<c)?((a<b)?a:b):c);
+        double max = (max((max(a, b)), c));//((((a>b)? a:b)>c)?((a>b)?a:b):c);
+        double min = (min((min(a, b)), c));//((((a<b)? a:b)<c)?((a<b)?a:b):c);
         System.out.println("Max value it is " + max + ", min value it is " + min);
     }
 }
