@@ -11,7 +11,7 @@ public class ValidationOfDate {
                 int month = Integer.parseInt(yourDate.substring(3, 5));
                 int year = Integer.parseInt(yourDate.substring(6, 10));
 
-                isDate = year > 2000 && year <= 2100
+                isDate = year > 0 && year <= 2100
                         && month >= 1 && month <= 12
                         && day > 0 && day <= 31;
 
