@@ -1,7 +1,10 @@
 package date_time;
 
+import lombok.experimental.UtilityClass;
+
+@UtilityClass// static and final methods
 public class ValidationOfDate {
-    public static boolean isDate(String yourDate) {
+    public boolean isDate(String yourDate) {
         char dot = '.';
         boolean isDate = yourDate.length() == 10 && (yourDate.charAt(2) == dot && yourDate.charAt(5) == dot);
 
