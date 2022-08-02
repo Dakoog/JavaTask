@@ -3,7 +3,11 @@ package dowhile;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+/*14.2.
+Podczas wprowadzania danych niejednokrotnie potrzebujemy liczb spełniających określone warunki, np. dodatnich.
+Napisz program, który przyjmie z konsoli wyłącznie wartość dodatnią zmiennej. Jeli użytkownik poda liczbę ujemną
+lub zero, to program powinien ponowić żądanie podania właściwej wartości.
+*/
 public class OnlyPositiveNumbers {
     public static void main(String[] args) throws IOException {
         InputStreamReader input = new InputStreamReader(System.in);
@@ -27,6 +31,8 @@ public class OnlyPositiveNumbers {
             b += b;
 
         } while (b < 100);
-        System.out.println("\b\b");
+        System.out.println("\b\b.");
+
+        input.close();
     }
 }

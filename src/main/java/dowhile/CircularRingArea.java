@@ -19,22 +19,25 @@ public class CircularRingArea {
             try {
                 rOuter = Double.parseDouble(br.readLine());
                 if(rOuter <= 0) {
-                    System.out.println("Remember, that radius this is positive number. Repeat Insertion");}
+                    System.out.println("Remember, that radius this is positive number. Repeat Insertion.");}
                 rInner = Double.parseDouble(br.readLine());
                 if ( rInner <= 0) {
-                    System.out.println("Remember, that radius this is positive number. Repeat Insertion");
+                    System.out.println("Remember, that radius this is positive number. Repeat Insertion.");
                 }
                 if(rInner>=rOuter){
-                    System.out.println("Remember, radius inner is smaller than radius outer. . Repeat Insertion\"");
+                    System.out.println("Remember, radius inner is smaller than radius outer. Repeat Insertion.");
                 }
 
             } catch (NumberFormatException nfe) {
-                System.out.println("Remember, that radius this is positive number. Repeat Insertion");
+                System.out.println("Remember, that radius this is positive number. Repeat Insertion.");
                 rInner = -1;
             }
 
         } while (rInner >= rOuter || rInner <= 0);
+
+
         double ringCircularArea = Math.PI * (rOuter * rOuter - rInner * rInner);
-        System.out.printf("Ring circular area for r = %.1f and R = %.1f is %.2f[j]^2", rInner, rOuter, ringCircularArea);
+        System.out.printf("Ring circular area for r = %.1f and R = %.1f is %.2f[j]^2.", rInner, rOuter, ringCircularArea);
+        input.close();
     }
 }

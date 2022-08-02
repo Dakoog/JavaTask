@@ -10,13 +10,16 @@ public class AbundanceOfFibonacciSequence {
     public static void main(String[] args) throws IOException {
         InputStreamReader input = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(input);
-        System.out.print("Please, insert nautral number which difines upper limit of the Fibonacci sequence, n = ");
+        System.out.print("Please, insert natural number which difines upper limit of the Fibonacci sequence, n = ");
         int n = Integer.parseInt(br.readLine());
-        int count = 2;
+        input.close();
+
         int a, b, c;
+        int count = 2;
         a = 1;
         b = 1;
         c = a + b;
+
         do {
             a = b;
             b = c;
@@ -24,7 +27,7 @@ public class AbundanceOfFibonacciSequence {
             count++;
 
         } while (c < n);
-        System.out.println(count);
+        System.out.println("The abundance of Fibonacci sequence for upper limit n = " + n + ", is " + count + ".");
     }
 
 }
