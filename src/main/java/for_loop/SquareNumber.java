@@ -1,4 +1,4 @@
-package while_loop.for_loop;
+package for_loop;
 
 import java.io.BufferedReader;
 import java.io.IOException;
