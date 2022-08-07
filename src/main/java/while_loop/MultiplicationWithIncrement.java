@@ -26,7 +26,7 @@ public class MultiplicationWithIncrement {
                     System.out.println(multiplicationOfInteger(a,b));
                     end = true;
                 } catch (NumberFormatException nfe) {
-                    System.out.println("You typed incorrect numbers. Please, try again");
+                    System.out.println("You typed incorrect numbers.Please, try again");
                 }
             }
         }
