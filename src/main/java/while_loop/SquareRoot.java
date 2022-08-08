@@ -13,10 +13,10 @@ public class SquareRoot {
              BufferedReader br = new BufferedReader(input)) {
 
             int n;
+
             do {
                 System.out.print("Please, insert natural positive numbers, n = ");
                 try {
-
                     n = Integer.parseInt(br.readLine());
                 } catch (NumberFormatException nfe) {
                     n = -1;
@@ -24,10 +24,10 @@ public class SquareRoot {
 
 
             } while (n < 0);
+
             int p = 0;
             while (p * p <= n) {
                 p++;
-
             }
             --p;// correction of the result
             System.out.printf("Total square root with number %d is %d", n, (p));

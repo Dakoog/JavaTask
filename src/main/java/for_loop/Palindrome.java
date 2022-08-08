@@ -39,7 +39,6 @@ public class Palindrome {
                 return false;
             }
         }
-
         return true;
     }
     public static boolean isSentencePalindrome(String word) {

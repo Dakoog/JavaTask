@@ -9,18 +9,21 @@ public class LCM {
 
         try (InputStreamReader input = new InputStreamReader(System.in);
              BufferedReader br = new BufferedReader(input)) {
-            int a,b;
-            String text = "ok";
-            do {
-                try { System.out.print("Please, insert two positive natural numbers.\na = ");
 
-                     a = Integer.parseInt(br.readLine());
+            String text;
+            int a, b;
+
+            do {
+                try {
+                    System.out.print("Please, insert two positive natural numbers.\na = ");
+                    a = Integer.parseInt(br.readLine());
                     System.out.print("b = ");
-                     b = Integer.parseInt(br.readLine());
-                     if(a<=0 || b<=0){
-                         text = "Given number is(numbers are) negative. ";
-                         System.out.println(text);
-                     }else {
+                    b = Integer.parseInt(br.readLine());
+
+                    if (a <= 0 || b <= 0) {
+                        text = "Given number is/(numbers are) negative. ";
+                        System.out.println(text);
+                    } else {
                         System.out.printf("LCM (%d , %d) = ", a, b);
                         int lcm;
                         if (a > b) {
@@ -35,20 +38,18 @@ public class LCM {
                             while (lcm % a != 0) {
                                 lcm += b;
                             }
-
                         }
-                         System.out.println(lcm);
+                        text = "ok";
+                        System.out.println(lcm);
                     }
 
                 } catch (NumberFormatException nfe) {
                     text = "This isn't positive natural number.Please, try again.";
                     System.out.println(text);
-
                 }
+            } while (!text.equals("ok"));
 
-                }while (!text.equals("ok"));
-
-            }
+        }
 
     }
 }
