@@ -1,5 +1,7 @@
 package while_loop;
 
+import fractions.Utils;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,33 +14,24 @@ public class GCDbyEuklidesAlgorithm {
         try (InputStreamReader input = new InputStreamReader(System.in);
              BufferedReader br = new BufferedReader(input)) {
 
-            int a, b, p;
-            String text = "ok";
+            int a, b;
+         boolean finish;
 
             do {
                 try {
                     System.out.print("Please, insert two positive natural numbers.\na = ");
-
                     a = Integer.parseInt(br.readLine());
                     System.out.print("b = ");
                     b = Integer.parseInt(br.readLine());
-                    if (a <= 0 || b <= 0) {
-                        text = "Given number is(numbers are) negative. ";
-                        System.out.println(text);
-                    } else {
-                        System.out.printf("GCD (%d, %d) = ", a, b);
-                        while (b != 0) {
-                            p = a % b;
-                            a = b;
-                            b = p;
-                        }
-                        System.out.println(a);
-                    }
+                    System.out.printf("GCD (%d, %d) = %d. ", a, b, Utils.GCD(a, b));
+                    finish = true;
                 } catch (NumberFormatException nfe) {
-                    text = "This isn't positive natural number.Please, try again.";
-                    System.out.println(text);
+                    finish = false;
+                    System.out.println("This isn't positive natural number.Please, try again.");
                 }
-            } while (!text.equals("ok"));
+            } while (!finish);
         }
+
     }
 }
+

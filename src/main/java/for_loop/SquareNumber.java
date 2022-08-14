@@ -11,7 +11,7 @@ public class SquareNumber {
 
         try (InputStreamReader input = new InputStreamReader(System.in);
              BufferedReader br = new BufferedReader(input)) {
-            String text = "ok";
+           boolean finish;
             do {
                 try {
 
@@ -20,21 +20,23 @@ public class SquareNumber {
                     int squareNumber = 0;
                     int noPairNumber = 1;
                     if (n < 0) {
-                        text = "Given number is negative.Try again";
-                        System.out.println(text);
+                       finish = false;
+                        System.out.println("Given number is negative.Try again");
                     } else {
                         for (int i = 0; i < n; i++) {
                             squareNumber += noPairNumber;
                             noPairNumber += 2;
                         }
                         System.out.printf("%d^2 = %d. %n", n, squareNumber);
+                        finish = true;
                     }
 
                 } catch (NumberFormatException nfe) {
-                    text = "Given number isn't natural.Try again.";
-                    System.out.println(text);
+                     finish = false;
+                    System.out.println("Given number isn't natural.Try again.");
+
                 }
-            } while (!text.equals("ok"));
+            } while (!finish);
 
         }
     }
