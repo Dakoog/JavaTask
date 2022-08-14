@@ -30,20 +30,36 @@ public class Fraction {
     public Fraction addingFractions(Fraction y) {
         return new Fraction(numerator * y.denominator + denominator * y.numerator, y.denominator * denominator);
     }
-
+    public Fraction addingFractions(int c) {
+        return new Fraction(c* denominator + numerator,  denominator);
+    }
     public Fraction subtractionFractions(Fraction y) {
         return new Fraction(numerator * y.denominator - denominator * y.numerator, y.denominator * denominator);
     }
+    public Fraction subtractionFractionsFrontInteger(int c) {
 
+        return new Fraction(c * denominator - numerator, denominator);
+    }
+    public Fraction subtractionFractionsBackInteger(int c) {
+
+        return new Fraction( numerator-c * denominator , denominator);
+    }
     public Fraction multiplyFractions(Fraction y) {
         return new Fraction(this.numerator * y.numerator, this.denominator * y.denominator);
     }
-
+    public Fraction multiplyFractions(int c) {
+        return new Fraction(c* numerator,  denominator);
+    }
     public Fraction divisionFractions(Fraction y) {
 
         return new Fraction(this.numerator * y.denominator, this.denominator * y.numerator);
     }
-
+    public Fraction divisionFractionsFrontInteger(int c) {
+        return new Fraction(c* denominator,  numerator);
+    }
+    public Fraction divisionFractionsBackInteger(int c) {
+        return new Fraction(numerator,c* denominator  );
+    }
     public Fraction reducingFraction() {
         int divide = Utils.GCD(numerator, denominator);
         if (divide > 1) {
