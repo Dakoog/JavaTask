@@ -1,6 +1,7 @@
 package fractions.tasks;
 
 import fractions.Fraction;
+import fractions.Utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,11 +18,11 @@ public class SolutionOfLinearEquation {
 
 
             System.out.print("Please, insert its factors \na = ");
-            Fraction a = new Fraction(br.readLine());
+            Fraction a = Utils.inputFraction(br);
 
 
             System.out.print("b = ");
-            Fraction b = new Fraction(br.readLine());
+            Fraction b = Utils.inputFraction(br);
 
             if (!a.equals(ZERO)) {
                 Fraction solution = b.divisionFractions(a).multiplyFractions(-1).reducingFraction();

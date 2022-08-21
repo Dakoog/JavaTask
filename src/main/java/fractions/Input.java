@@ -2,7 +2,7 @@ package fractions;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+
 
 public class Input {
     public static Fraction inputFraction(BufferedReader br) throws IOException {
