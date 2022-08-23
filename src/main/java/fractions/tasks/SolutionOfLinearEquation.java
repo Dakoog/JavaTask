@@ -15,12 +15,13 @@ public class SolutionOfLinearEquation {
         try (InputStreamReader input = new InputStreamReader(System.in);
              BufferedReader br = new BufferedReader(input)) {
             System.out.println("Solution of linear equation of type: ax + b = 0.");
+    boolean finish = false;
 
+            do {
+        try {
 
-            System.out.print("Please, insert its factors \na = ");
+            System.out.print("Please, insert its factors: \na = ");
             Fraction a = Utils.inputFraction(br);
-
-
             System.out.print("b = ");
             Fraction b = Utils.inputFraction(br);
 
@@ -35,6 +36,14 @@ public class SolutionOfLinearEquation {
 
                 System.out.printf("Equation %sx + %s = 0 is a contradictory . Its solution is an empty set.", a, b);
             }
+            finish = true;
+
+        } catch (NumberFormatException nfe) {
+            System.out.println("You put wrong data. Try again.");
+        }
+    } while (!finish);
+
+
 
 
         }

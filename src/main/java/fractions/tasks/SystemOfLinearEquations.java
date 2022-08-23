@@ -77,7 +77,7 @@ public class SystemOfLinearEquations {
                     finish = true;
                     // exception
                 } catch (NumberFormatException nfe) {
-                    System.out.println("You insert wrong data. Try again");
+                    System.out.println("You put wrong data. Try again.");
                 }
             } while (!finish);
 

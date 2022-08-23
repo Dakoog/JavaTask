@@ -8,7 +8,7 @@ public class Fraction {
     private int numerator;
     private int denominator;
 
-
+// constructors
     public Fraction(int a, int b) {
 
         if (b == 0) {
@@ -29,6 +29,44 @@ public class Fraction {
         this.denominator = 1;
     }
 
+    public Fraction(int m) {
+        this.numerator = m;
+        this.denominator = 1;
+    }
+    // fraction in different notations
+    public Fraction(String str) {
+        int i = str.indexOf('.');
+        if (i == -1) {
+            i = str.indexOf(',');
+        }
+
+        if (i == -1) {
+            i = str.indexOf('/');
+            if (i == -1) {
+                this.numerator = Integer.parseInt(str);
+                this.denominator = 1;
+            } else {
+                this.numerator = Integer.parseInt(str.substring(0, i));
+                this.denominator = Integer.parseInt(str.substring(i + 1));
+                if (this.denominator == 0)
+                    throw new ArithmeticException("Don't divide by 0!");
+            }
+        } else {
+            this.numerator = Integer.parseInt(str.substring(0, i) +
+                    str.substring(i + 1));
+            int k = str.length() - i;
+            this.denominator = 1;
+            int n = 1;
+            while (n++ < k)
+                this.denominator *= 10;
+        }
+
+        this.reducingFraction();
+
+    }
+
+// gets and setts
+
     public int getNumerator() {
         return this.numerator;
     }
@@ -45,47 +83,49 @@ public class Fraction {
         this.denominator = denominator;
     }
 
+// arithmetic actions
+
     public Fraction addingFractions(Fraction y) {
-        return new Fraction(numerator * y.denominator + denominator * y.numerator, y.denominator * denominator);
+        return new Fraction(numerator * y.denominator + denominator * y.numerator, y.denominator * denominator).reducingFraction();
     }
 
     public Fraction addingFractions(int c) {
-        return new Fraction(c * denominator + numerator, denominator);
+        return new Fraction(c * denominator + numerator, denominator).reducingFraction();
     }
 
     public Fraction subtractionFractions(Fraction y) {
-        return new Fraction(numerator * y.denominator - denominator * y.numerator, y.denominator * denominator);
+        return new Fraction(numerator * y.denominator - denominator * y.numerator, y.denominator * denominator).reducingFraction();
     }
 
-    public Fraction subtractionFractionsFrontInteger(int c) {
+    public Fraction subtractionFromInteger(int c) {
 
-        return new Fraction(c * denominator - numerator, denominator);
+        return new Fraction(c * denominator - numerator, denominator).reducingFraction();
     }
 
-    public Fraction subtractionFractionsBackInteger(int c) {
+    public Fraction subtractionIntegerFrom(int c) {
 
-        return new Fraction(numerator - c * denominator, denominator);
+        return new Fraction(numerator - c * denominator, denominator).reducingFraction();
     }
 
     public Fraction multiplyFractions(Fraction y) {
-        return new Fraction(this.numerator * y.numerator, this.denominator * y.denominator);
+        return new Fraction(this.numerator * y.numerator, this.denominator * y.denominator).reducingFraction();
     }
 
     public Fraction multiplyFractions(int c) {
-        return new Fraction(c * numerator, denominator);
+        return new Fraction(c * numerator, denominator).reducingFraction();
     }
 
     public Fraction divisionFractions(Fraction y) {
 
-        return new Fraction(this.numerator * y.denominator, this.denominator * y.numerator);
+        return new Fraction(this.numerator * y.denominator, this.denominator * y.numerator).reducingFraction();
     }
 
-    public Fraction divisionFractionsFrontInteger(int c) {
-        return new Fraction(c * denominator, numerator);
+    public Fraction divisionFromInteger(int c) {
+        return new Fraction(c * denominator, numerator).reducingFraction();
     }
 
-    public Fraction divisionFractionsBackInteger(int c) {
-        return new Fraction(numerator, c * denominator);
+    public Fraction divisionIntegerFrom(int c) {
+        return new Fraction(numerator, c * denominator).reducingFraction();
     }
 
     public Fraction reducingFraction() {
@@ -135,48 +175,20 @@ public class Fraction {
         return new Fraction(a * denominator + numerator, denominator);
     }
 
-    @Override
-    public String toString() {
-        if (numerator % denominator == 0) {
-            return String.valueOf(numerator / denominator);
-        } else if (numerator == 0) {
-            return "0";
-        } else {
-            return numerator + "/" + denominator;
-        }
-
+    public double changeToDecimal(Fraction x) {
+        return Math.round(1000000 * (numerator / (double) denominator)) / 1000000d;
     }
 
 
-    public Fraction(String str) {
-        int i = str.indexOf('.');
-        if (i == -1) {
-            i = str.indexOf(',');
+    public Fraction abs() {
+        if (numerator < 0) {
+            return new Fraction(-numerator, denominator);
         }
+        return this;
+    }
 
-        if (i == -1) {
-            i = str.indexOf('/');
-            if (i == -1) {
-                this.numerator = Integer.parseInt(str);
-                this.denominator = 1;
-            } else {
-                this.numerator = Integer.parseInt(str.substring(0, i));
-                this.denominator = Integer.parseInt(str.substring(i + 1));
-                if (this.denominator == 0)
-                    throw new ArithmeticException("Don't divide by 0!");
-            }
-        } else {
-            this.numerator = Integer.parseInt(str.substring(0, i) +
-                    str.substring(i + 1));
-            int k = str.length() - i;
-            this.denominator = 1;
-            int n = 1;
-            while (n++ < k)
-                this.denominator *= 10;
-        }
-
-        this.reducingFraction();
-
+    public boolean isUpper(Fraction b) {
+        return numerator * b.denominator > denominator * b.numerator;
     }
 
     @Override
@@ -199,5 +211,17 @@ public class Fraction {
         Fraction x = new Fraction(numerator, denominator);
         x.reducingFraction();
         return Objects.hash(x.numerator, x.denominator);
+    }
+
+    @Override
+    public String toString() {
+        if (numerator % denominator == 0) {
+            return String.valueOf(numerator / denominator);
+        } else if (numerator == 0) {
+            return "0";
+        } else {
+            return numerator + "/" + denominator;
+        }
+
     }
 }
